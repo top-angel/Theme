@@ -15,6 +15,9 @@
 		);
 		wp_nav_menu($args);
 	?>
+	<script>
+		jQuery('#nocStudioNavbar li > a').addClass('nav-link');
+	</script>
 
 
 
@@ -22,6 +25,4 @@
 
 
 
-<script>
-		jQuery('#nocStudioNavbar li > a').addClass('nav-link');
-</script>
+

@@ -21,32 +21,14 @@
 </head>
 
 <body <?php body_class(); ?>>
+<!--We add some classes to facilitate the transition magic from this site https://codyhouse.co/gem/animated-page-transition/ -->
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'nocstudiox' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$nocstudiox_description = get_bloginfo( 'description', 'display' );
-			if ( $nocstudiox_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $nocstudiox_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
 		<?php 
+		//Pull in bootstrap header to display top menu from site
 			get_template_part('template-parts/bootstrap', 'header');
-		
 		?>
 
 	</header><!-- #masthead -->

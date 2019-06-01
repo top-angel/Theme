@@ -11,7 +11,9 @@ if ( ! function_exists( 'nocstudiox_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function nocstudiox_posted_on() {
+	
+	function nocstudiox_posted_on($acfDate) {
+		
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -23,6 +25,13 @@ if ( ! function_exists( 'nocstudiox_posted_on' ) ) :
 			esc_attr( get_the_modified_date( DATE_W3C ) ),
 			esc_html( get_the_modified_date() )
 		);
+		//Here is where I get what WP says is the original time and assign it to the variable of
+		//$originalTime
+		$originalTime = $time_string;
+		//Then I make $time_string equal the result of applying the filter for this template-tag
+		//'nocstudiox_posted_on' and I pass in two variables, $acfDate and $originalTime
+		//This filter's actions can be seen at functions.php
+		$time_string = apply_filters('nocstudiox_posted_on', $acfDate, $originalTime);
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
@@ -30,10 +39,15 @@ if ( ! function_exists( 'nocstudiox_posted_on' ) ) :
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
+
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 	}
+
+
 endif;
+
+
 
 if ( ! function_exists( 'nocstudiox_posted_by' ) ) :
 	/**

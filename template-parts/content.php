@@ -6,11 +6,15 @@
  *
  * @package NocStudioX
  */
-
+$acfDate = get_field('date_posted');
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+	<script>
+		// console.log(<?php echo json_encode($post)?>);
+		// console.log(<?php echo json_encode(get_field('date_posted'))?>);
+	</script>
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -22,7 +26,9 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				nocstudiox_posted_on();
+				// apply_filters('nocstudiox_posted_on', $acfDate);
+
+				nocstudiox_posted_on($acfDate);
 				nocstudiox_posted_by();
 				?>
 			</div><!-- .entry-meta -->

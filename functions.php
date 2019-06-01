@@ -195,6 +195,25 @@ function webpack_bundle(){
     wp_enqueue_script("bundle", get_stylesheet_directory_uri() . "/dist/bundle.js", array('jquery'), 1, true);
 }
 
+//We add a filter so that our ACF Custom Field value of 'date_posted' can take
+//precedence over the value derived from the template tag 'nocstudiox_posted_on' which is
+//located in template-tags.php. Basically, if there is an ACF posted date time and it is not null, then
+//it will be the one that is shown on screen as the text for the anchor tag leading to the post. If it IS null
+//then we will just use what the custom template tag originall derived for us.
+
+//Yes, I will be this fucking detailed in my comments because if I walked away for a month and came back
+//or gave this to someone who had no idea what the fuck was going on, it would be cruel and unusual punishment
+//for that individual who probably wants to see their significant other, enjoy a walk in nature, or grab a beer
+//with friends later on...y'know...why we as people ACTUALLY work.
+add_filter("nocstudiox_posted_on", "get_acf_date", 10, 2);
+function get_acf_date($acfDate, $originalTime) {
+	if($acfDate != null) {
+	return $acfDate;
+	} else {
+		return $originalTime;
+	}
+}
+
 function add_specific_menu_location_atts( $atts, $item, $args ) {
     // check if the item is in the primary menu
     if( $args->theme_location == 'primary' ) {

@@ -11,7 +11,7 @@ module.exports = function(env) {
             rules: [
                 {test: /\.html$/, loader: 'raw-loader', exclude: /node_modules/},
                 {test: /\.(s*)css$/, use:['style-loader', 'css-loader', 'sass-loader']},
-                {test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, loader: 'url-loader'}
+                {test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, use: 'url-loader'}
             ]
         }
     }

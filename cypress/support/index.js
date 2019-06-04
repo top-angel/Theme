@@ -13,6 +13,11 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+//require Tab Plugin
+require('cypress-plugin-tab');
+require('chai-jquery');
+
+
 // Import commands.js using ES2015 syntax:
 import './commands'
 

@@ -58,6 +58,12 @@ describe('acf_date_posted', ()=>{
         cy.get('input#publish').click(); 
         cy.wait(2000);
         cy.get('input.hasDatepicker').should('have.value', 'January 1, 1919');
+    });
+
+    it('when you see the actual post, should reflect the chosen date', ()=>{
+        cy.get('div#message').find('p').find('a').click();
+        cy.wait(1000);
+        cy.get('span.posted-on').find('a').should('contain', 'January 1, 1919');
     })
 
 })

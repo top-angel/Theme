@@ -64,6 +64,42 @@ describe('acf_date_posted', ()=>{
         cy.get('div#message').find('p').find('a').click();
         cy.wait(1000);
         cy.get('span.posted-on').find('a').should('contain', 'January 1, 1919');
+        let todaysDate = Cypress.moment().format('MMMM D, YYYY');
+        cy.get('span.posted-on').find('a').should('not.contain', todaysDate);
+    });
+
+    it('will delete when we tell it so', ()=>{
+        cy.go('back');
+        cy.get('#delete-action').find('a.submitdelete').click();
+        cy.get('#message').find('p').should('contain', '1 post moved to the Trash.');
     })
+});
+
+describe('the date post expressed when we do not use the acf field will be the current date', ()=>{
+    it('should set up a vanilla non acf date posted post', ()=>{
+        cy.get('a.page-title-action').click();
+        cy.get('input#title').type('non_acf_date_post');
+        cy.get('input#publish').click();
+    });
+
+    it('should tell us that a post was created', ()=>{
+        cy.get('div#message').find('p').should('contain', 'Post published.');
+    });
+
+    it('should allow us to visit our new vanilla post', ()=>{
+        cy.get('div#message').find('p').find('a').click();
+    });
+
+    it('should have the current date as the publish date', ()=>{
+        let todaysDate = Cypress.moment().format('MMMM D, YYYY');
+        cy.get('span.posted-on').find('a').should('contain', todaysDate);
+    });
+
+    it('will allow us to delete this vanilla post', ()=>{
+        cy.go('back');
+        cy.get('#delete-action').find('a.submitdelete').click();
+        cy.get('#message').find('p').should('contain', '1 post moved to the Trash.');
+    });
+
 
 })

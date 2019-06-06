@@ -34,6 +34,7 @@ function addBlacklistClass() {
                 $container.removeClass('slide-out');
             },
             onStart: {
+                //todo: add some kind of clause or function that 
                 duration: 280, //ms
                 render: function($container) {
                     $container.addClass('slide-out');

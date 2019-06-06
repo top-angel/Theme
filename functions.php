@@ -187,6 +187,14 @@ function fontawesome_from_node_modules(){
     wp_enqueue_style("FontAwesome", get_stylesheet_directory_uri() . "/node_modules/@fortawesome/fontawesome-free/css/all.min.css");
 }
 
+//Enqueue SmoothState-JS from Node Modules
+add_action("wp_enqueue_scripts", "smoothStateJS_from_node_modules");
+function smoothStateJS_from_node_modules(){
+	wp_register_script("smoothStateJSFromNodeModules", get_stylesheet_directory_uri()."/node_modules/smoothstate/src/jquery.smoothState.js", array('jquery'), '0.7.2');
+	wp_enqueue_script("smoothStateJSFromNodeModules", array(), false);
+}
+
+
 
 
 //Enqueue our Webpack Created Bundle.JS file
@@ -194,6 +202,8 @@ add_action("wp_enqueue_scripts", "webpack_bundle");
 function webpack_bundle(){
     wp_enqueue_script("bundle", get_stylesheet_directory_uri() . "/dist/bundle.js", array('jquery'), 1, true);
 }
+
+
 
 //We add a filter so that our ACF Custom Field value of 'date_posted' can take
 //precedence over the value derived from the template tag 'nocstudiox_posted_on' which is
@@ -213,6 +223,7 @@ function get_acf_date($acfDate, $originalTime) {
 		return $originalTime;
 	}
 }
+
 
 function add_specific_menu_location_atts( $atts, $item, $args ) {
     // check if the item is in the primary menu

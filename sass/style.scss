@@ -58,6 +58,38 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     url("//db.onlinewebfonts.com/t/f6a8b2423790ec81bbbd18662bbc7f03.ttf") format("truetype"),
     url("//db.onlinewebfonts.com/t/f6a8b2423790ec81bbbd18662bbc7f03.svg#BelindaW00-Regular") format("svg");
 }
+
+@font-face {font-family: "Playfair Display";
+    src:url("../fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {font-family: "Playfair Display Bold Italic";
+    src:url("../fonts/PlayfairDisplay-BoldItalic.ttf") format("truetype");
+}
+
+
+@font-face {font-family: "Marzo";
+    src: url("//db.onlinewebfonts.com/t/1e6ec96c95301fa73aa1d026f161a269.eot");
+    src: url("//db.onlinewebfonts.com/t/1e6ec96c95301fa73aa1d026f161a269.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/1e6ec96c95301fa73aa1d026f161a269.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/1e6ec96c95301fa73aa1d026f161a269.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/1e6ec96c95301fa73aa1d026f161a269.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/1e6ec96c95301fa73aa1d026f161a269.svg#MarzoW00-Regular") format("svg");
+}
+
+@font-face {font-family: "Geomanist Italic";
+    src:url('../fonts/geomanist-regular-italic-webfont.ttf') format("truetype");
+    src:url('../fonts/geomanist-regular-italic-webfont.woff') format("woff");
+    src:url('../fonts/geomanist-regular-italic-webfont.woff2') format("woff2");
+}
+
+@font-face {font-family: "Geomanist";
+    src:url('../fonts/geomanist-regular-webfont.ttf') format('truetype');
+    src:url('../fonts/geomanist-regular-webfont.woff') format('woff');
+    src:url('../fonts/geomanist-regular-webfont.woff2') format('woff2');
+    
+
+}
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -123,3 +155,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 ---------------------------------------*/
 @import "classes/site-content.scss";
 @import "classes/slide-out.scss";
+
+
+/*----------------------------------
+# Ids
+-----------------------------------*/
+@import "ids/nocNavBar.scss";
+@import "ids/nocStudioNavbarUL.scss";

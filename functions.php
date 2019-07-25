@@ -203,6 +203,19 @@ function webpack_bundle(){
     wp_enqueue_script("bundle", get_stylesheet_directory_uri() . "/dist/bundle.js", array('jquery'), 1, true);
 }
 
+//We employ a special hook to tack on HTML to our wp_nav_menu thing
+// function add_last_nav_item($bootstrapSearchBar) {
+
+// 		let search = `<form class="form-inline my-2 my-lg-0" role="search" method="get" action="https://localhost/nocStudio/">
+// 		<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+// 		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+// 	  </form>`;
+// 		jQuery('nav').(search);
+	
+
+// }
+// add_filter('wp_nav_menu_items', 'add_last_nav_item');
+
 
 
 //We add a filter so that our ACF Custom Field value of 'date_posted' can take
@@ -235,3 +248,12 @@ function add_specific_menu_location_atts( $atts, $item, $args ) {
 }
 add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
 
+function my_acf_google_map_api( $api ){
+	
+	$api['key'] = 'AIzaSyBesXuvxbcwHhVQGyrFxe9N6o_d0omWzU8';
+	
+	return $api;
+	
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');

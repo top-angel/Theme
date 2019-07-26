@@ -153,6 +153,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*------------------------------------------
 # Classes
 ---------------------------------------*/
+@import "classes/page-header.scss";
 @import "classes/site-content.scss";
 @import "classes/slide-out.scss";
 
@@ -162,3 +163,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 -----------------------------------*/
 @import "ids/nocNavBar.scss";
 @import "ids/nocStudioNavbarUL.scss";
+
+/*----------------------------------
+# Animations
+-----------------------------------*/
+@import './animations.scss';

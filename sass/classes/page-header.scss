@@ -1,0 +1,37 @@
+@keyframes titleMovement {
+    0% {
+        transform:translate(-10vw);
+        width:auto;
+        opacity: 0;
+    }
+
+    100%{
+        transform:translate(0vw);
+        transform: skew(-20deg);
+        width: 15vw;
+        background:black;
+        color: whitesmoke;
+        opacity: 1;
+
+    }
+}
+
+.page-header, .entry-header {
+    opacity:0;
+    border: solid;
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+    left: 1rem;
+    // transform: skew(-20deg);
+    margin: 1rem auto;
+    text-align: right;
+    width: 15vw;
+    animation: titleMovement 2.5s;
+    animation-fill-mode: forwards;
+
+    h1.page-title, h1.entry-title {
+        font-family: "Geomanist Italic", sans-serif;
+        transform: skew(20deg);
+    }
+}

@@ -20,14 +20,16 @@
 		jQuery('#navbarSupportedContent').append(`
 		<form class="form-inline my-2 my-lg-0" 
 			  role="search" method="get" 
-			  action="https://localhost:8888/nocStudio/"
+			  action="http://localhost:8888/nocStudio/"
 		>
 		<div class="input-group">
 				<input 
-					class="form-control mr-sm-2" 
+					class="form-control mr-sm-2 search-field" 
 					type="search" 
 					placeholder="Search" 
 					aria-label="Search"
+					value
+					name="s"
 				>
 				<div class="input-group-btn">
 					<button class="btn btn-default" type="submit">

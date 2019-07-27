@@ -20,7 +20,7 @@
 		jQuery('#navbarSupportedContent').append(`
 		<form class="form-inline my-2 my-lg-0" 
 			  role="search" method="get" 
-			  action="http://localhost:8888/nocStudio/"
+			  action="<?php get_site_url(); ?>"
 		>
 		<div class="input-group">
 				<input 

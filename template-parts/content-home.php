@@ -72,7 +72,9 @@
         <span>
           <?php echo $postDate?>
         </span>
-        <?php echo wp_trim_words(get_the_content(), 90, '...');?>
+        <img src="<?php the_post_thumbnail_url();?>" />
+
+        <p><?php echo wp_trim_words(get_the_content(), 90, '...');?></p>
         <a href=<?php the_permalink() ?> >
           Read More
         </a>

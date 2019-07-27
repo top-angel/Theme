@@ -248,12 +248,3 @@ function add_specific_menu_location_atts( $atts, $item, $args ) {
 }
 add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
 
-function my_acf_google_map_api( $api ){
-	
-	$api['key'] = 'AIzaSyBesXuvxbcwHhVQGyrFxe9N6o_d0omWzU8';
-	
-	return $api;
-	
-}
-
-add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');

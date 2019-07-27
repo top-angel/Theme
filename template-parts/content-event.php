@@ -15,8 +15,8 @@
     <div class='event__template__content__container'>
       <div class='eventContent'><?php the_content(); ?></div>
       <div class='event-details'>
-        <div class='event-time'><strong>Time: </strong> <?php echo get_field('event_time'); ?></div>
-        <div class='event-tickets'><strong>Tickets: </strong> <?php echo get_field('tickets'); ?></div>
+        <div class='event-time'><strong>Time: </strong> <?php echo $eventDate->format('g:i a'); ?></div>
+        <div class='event-tickets'><strong>Tickets: </strong> <?php echo get_field('event_tickets'); ?></div>
 
       </div>
       <div class='acf-map'>

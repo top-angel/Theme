@@ -19,8 +19,8 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<div id="frontPageBannerBox">
-				<h1>NOC STUDIO</h1>
+			<div class="jumbotron" id="frontPageBannerBox">
+				<h1 class="display-4">NOC STUDIO</h1>
 				<h2>Express your authentic voice</h2>
 			</div>
 		<?php

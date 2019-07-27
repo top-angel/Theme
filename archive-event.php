@@ -24,10 +24,10 @@ get_header();
 }
 
 </style>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBesXuvxbcwHhVQGyrFxe9N6o_d0omWzU8"></script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBesXuvxbcwHhVQGyrFxe9N6o_d0omWzU8&callback=initMap"></script>
 <script type="text/javascript">
 (function($) {
-console.log('this is coming from content-event.php');
 /*
 *  new_map
 *

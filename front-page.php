@@ -19,6 +19,10 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+			<div id="frontPageBannerBox">
+				<h1>NOC STUDIO</h1>
+				<h2>Express your authentic voice</h2>
+			</div>
 		<?php
 		
 			get_template_part( 'template-parts/content', 'home' );

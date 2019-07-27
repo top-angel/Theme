@@ -161,6 +161,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*----------------------------------
 # Ids
 -----------------------------------*/
+@import 'ids/frontPageBannerBox.scss';
+@import 'ids/frontPageSectionContainer.scss';
+@import 'ids/homePageBlogSection.scss';
+@import 'ids/homePageEventsSection.scss';
+@import 'ids/homePageNewsSection.scss';
+@import 'ids/homePageReviewsSection.scss';
 @import "ids/nocNavBar.scss";
 @import "ids/nocStudioNavbarUL.scss";
 

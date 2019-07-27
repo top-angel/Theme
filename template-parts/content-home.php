@@ -1,23 +1,9 @@
-<section id="homePageReviewsSection">
-<h2>Reviews</h2>
-  <?php 
-    $reviewEntries = new WP_Query(array(
-      'posts_per_page' => 2,
-      'post_type' => 'review'
-    ));
-    while($reviewEntries -> have_posts()) {
-      $reviewEntries->the_post(); ?>
-  <p>
-    <?php the_content();?>
-  </p>
-  <span>
-    <?php the_field('reviewer');?>
-  </span>
-  <?php }
-    wp_reset_postdata();
-  ?>
-</section>
+<div id="frontPageSectionContainer">
 
+<section id="homePageNewsSection">
+  <h2>News</h2>
+  <strong>TODO: Find a way to pull in select events and articles???</strong>
+</section>
 
 <section id="homePageEventsSection">
   <h2>Events</h2>
@@ -44,10 +30,27 @@
       ?>
 </section>
 
-<section id="homePageNewsSection">
-  <h2>News</h2>
-  <strong>TODO: Find a way to pull in select events and articles???</strong>
+<section id="homePageReviewsSection">
+
+<h2>Reviews</h2>
+  <?php 
+    $reviewEntries = new WP_Query(array(
+      'posts_per_page' => 2,
+      'post_type' => 'review'
+    ));
+    while($reviewEntries -> have_posts()) {
+      $reviewEntries->the_post(); ?>
+  <p>
+    <?php the_content();?>
+  </p>
+  <span>
+    <?php the_field('reviewer');?>
+  </span>
+  <?php }
+    wp_reset_postdata();
+  ?>
 </section>
+
 
 <section id="homePageBlogSection">
   <h2>Blog</h2>
@@ -74,7 +77,8 @@
           Read More
         </a>
     </div>
-</section>
 <?php }
 wp_reset_postdata();
 ?>
+    </section>
+        </div>

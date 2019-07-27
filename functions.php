@@ -132,6 +132,11 @@ function nocstudiox_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'nocstudiox_scripts' );
 
+function googleAPIScript() {
+	wp_enqueue_script('googlekeything', "https://maps.googleapis.com/maps/api/js?key=AIzaSyBesXuvxbcwHhVQGyrFxe9N6o_d0omWzU8", array(), '', true);
+}
+add_action('wp_enqueue_scripts', 'googleAPIScript');
+
 /**
  * Implement the Custom Header feature.
  */
@@ -166,6 +171,12 @@ function enqueue_parent_styles() {
     wp_enqueue_style( "parent-style", get_template_directory_uri() . "/style.css");
 }
 
+//Enqueue our Webpack Created Bundle.JS file
+add_action("wp_enqueue_scripts", "webpack_bundle", 1);
+function webpack_bundle(){
+    wp_enqueue_script("bundle", get_stylesheet_directory_uri() . "/dist/bundle.js", array('jquery'), 1, true);
+}
+
 
 //Enqueue Bootstrap from Node_Modules
 	// Bootstrap JS
@@ -197,11 +208,7 @@ function smoothStateJS_from_node_modules(){
 
 
 
-//Enqueue our Webpack Created Bundle.JS file
-add_action("wp_enqueue_scripts", "webpack_bundle");
-function webpack_bundle(){
-    wp_enqueue_script("bundle", get_stylesheet_directory_uri() . "/dist/bundle.js", array('jquery'), 1, true);
-}
+
 
 //We employ a special hook to tack on HTML to our wp_nav_menu thing
 // function add_last_nav_item($bootstrapSearchBar) {
@@ -248,3 +255,25 @@ function add_specific_menu_location_atts( $atts, $item, $args ) {
 }
 add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
 
+add_action('wp_head', 'fouc_protect_against');
+/**
+ * Combat FOUC in WordPress
+ * @link https://stackoverflow.com/questions/3221561/eliminate-flash-of-unstyled-content
+ */
+function fouc_protect_against () {
+    ?>
+        <style type="text/css">
+            .hidden {display:none;}
+        </style>
+		<script type="text/javascript">
+		
+         jQuery('html').addClass('hidden');
+	            
+	 jQuery(document).ready(function($) {		            
+	    $('html').removeClass('hidden');	            
+	 });  
+		</script>
+
+    <?php
+
+}

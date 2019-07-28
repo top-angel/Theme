@@ -1,16 +1,8 @@
 
-
-
-
-
-
-
-
-
-
 <?php $mapLocation = get_field('event_map'); ?>
 <div class='post-item'>
     <a class='event__anchor' href="<?php the_permalink(); ?>">
+    <img src="<?php echo get_field('event_image');?>" />
     <div class='event-date-sphere'>
     <span class="event-summary__month"><?php 
       $eventDate = new DateTime(get_field("event_date", false, false));

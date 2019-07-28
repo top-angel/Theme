@@ -1,4 +1,6 @@
 <?php
+
+
 /**
  * NocStudioX functions and definitions
  *
@@ -132,10 +134,27 @@ function nocstudiox_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'nocstudiox_scripts' );
 
+function my_acf_google_map_api( $api ){
+	
+	$api['key'] = 'AIzaSyBesXuvxbcwHhVQGyrFxe9N6o_d0omWzU8';
+	
+	return $api;
+	
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+
+
 function googleAPIScript() {
-	wp_enqueue_script('googlekeything', "https://maps.googleapis.com/maps/api/js?key=AIzaSyBesXuvxbcwHhVQGyrFxe9N6o_d0omWzU8", array('jquery'), '', true);
+	wp_enqueue_script('googleAPIScript', "https://maps.googleapis.com/maps/api/js?key=AIzaSyBesXuvxbcwHhVQGyrFxe9N6o_d0omWzU8", array('jquery'), '', true);
 }
 add_action('wp_enqueue_scripts', 'googleAPIScript', '', '', false);
+
+
+
+
+
+
 
 /**
  * Implement the Custom Header feature.

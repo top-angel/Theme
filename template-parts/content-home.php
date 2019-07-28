@@ -1,12 +1,12 @@
 <div id="frontPageSectionContainer">
 
 <section id="homePageNewsSection">
-  <h2>News</h2>
+  <h2 class="homePageSectionHeader">News</h2>
   <strong>TODO: Find a way to pull in select events and articles???</strong>
 </section>
 
 <section id="homePageEventsSection">
-  <h2>Events</h2>
+  <h2 class="homePageSectionHeader">Events</h2>
     <?php 
         $eventEntries = new WP_Query(array(
             'post_type' => 'event'
@@ -32,7 +32,7 @@
 
 <section id="homePageReviewsSection">
 
-<h2>Reviews</h2>
+<h2 class="homePageSectionHeader">Reviews</h2>
   <?php 
     $reviewEntries = new WP_Query(array(
       'posts_per_page' => 2,
@@ -53,7 +53,7 @@
 
 
 <section id="homePageBlogSection">
-  <h2>Blog</h2>
+  <h2 class="homePageSectionHeader">Blog</h2>
     <?php 
       $blogEntries = new WP_Query(array(
           'category_name' => 'blog',

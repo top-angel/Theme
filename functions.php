@@ -288,8 +288,12 @@ function fouc_protect_against () {
 		
          jQuery('html').addClass('hidden');
 	            
-	 jQuery(document).ready(function($) {		            
-	    $('html').removeClass('hidden');	            
+	 jQuery(document).ready(function($) {
+		 
+			 $('html').removeClass('hidden');
+
+		            
+			            
 	 });  
 		</script>
 

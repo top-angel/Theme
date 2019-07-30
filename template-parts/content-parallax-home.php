@@ -9,7 +9,7 @@ $image3 = wp_get_attachment_image_src(280, full);
     <div 
     class="parallax" 
     id='parallax1'
-    style='background-image:url(<?php echo $image1[0] ?>)'
+    style='background-image: url(<?php echo $image1[0] ?>)'
     >
     <div class="jumbotron" id="frontPageBannerBox">
 				<h1 class="display-4">NOC STUDIO</h1>
@@ -21,14 +21,21 @@ $image3 = wp_get_attachment_image_src(280, full);
     <div 
         class="parallax" 
         id="aboutSection"
-        style="background-image:url(<?php echo $image2[0] ?>"
+        style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 2.1), rgba(0, 0, 0, 0.6)), url(<?php echo $image2[0] ?>"
     >
         <h2 class="mediumFont indexCategorySection">ABOUT</h2>
-        <p> 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius pulvinar justo. Nulla ac mi sed lacus tempor vehicula. Vestibulum vitae elit ut erat varius vehicula. Donec nisl nunc, vestibulum vitae cursus ut, auctor eu dolor. Sed tristique semper risus, ut tristique quam sagittis vel. Nullam vel ultrices leo. Mauris facilisis quam enim, ut consequat sem commodo vestibulum. Duis id nisi nisi. Aenean vel dignissim ex, sed volutpat diam. Fusce maximus consequat ornare. Nunc in odio at magna ullamcorper vestibulum. Integer scelerisque augue ligula, non rutrum justo dapibus sit amet. Phasellus at scelerisque erat, quis ullamcorper diam. Integer fermentum porttitor libero pulvinar maximus.
-
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras pharetra porttitor pretium. Nulla finibus orci ut leo fringilla rutrum. Cras ligula elit, ultrices id vulputate eu, malesuada et dui. Vivamus turpis felis, facilisis nec convallis et, accumsan fringilla ante. Aenean laoreet lorem justo. Donec iaculis rhoncus laoreet. Nulla nisi augue, feugiat eget molestie id, consectetur in ex. Curabitur eget urna feugiat, euismod eros ut, dictum enim. In hac habitasse platea dictumst. Integer nec lectus id dolor pulvinar rutrum. Praesent ut dignissim felis. Curabitur rhoncus ipsum nec maximus blandit.
-</p>
+        <?php 
+        $aboutPost = get_post(6);     
+        $content_post = get_post($aboutPost);
+        $content = $content_post -> post_content;
+        // $content = apply_filter('the_content', $content);
+        // $content =str_replace(']]>', ']]&gt;', $content);
+        ?>
+        <section id="aboutSection">
+        <?php
+        echo $content;
+        ?>
+        </section>
 
 </div>
 

@@ -81,6 +81,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import './fonts.scss';
 
 
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+@import './colors.scss';
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -155,7 +160,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*----------------------------------
 # Ids
 -----------------------------------*/
+@import 'ids/aboutDiv.scss';
+@import 'ids/aboutH2.scss';
 @import 'ids/aboutSection.scss';
+@import 'ids/contactH2.scss';
+@import 'ids/contactSection.scss';
 @import 'ids/frontPageBannerBox.scss';
 @import 'ids/frontPageSectionContainer.scss';
 @import 'ids/homePageBlogSection.scss';

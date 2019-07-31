@@ -1,7 +1,7 @@
 <?php 
 $image1 = wp_get_attachment_image_src(278, full);
-$image2 = wp_get_attachment_image_src(279, full);
-$image3 = wp_get_attachment_image_src(280, full);
+$image3 = wp_get_attachment_image_src(290, full);
+$fbIcon = wp_get_attachment_image_src(291, full);
 
 ?>
 <div id="content-parallax-container">
@@ -18,26 +18,10 @@ $image3 = wp_get_attachment_image_src(280, full);
        
     </div>
 
-    <div 
-        class="parallax" 
-        id="aboutSection"
-        style="background-image:linear-gradient(to bottom, rgba(0, 0, 0, 2.1), rgba(0, 0, 0, 0.6)), url(<?php echo $image2[0] ?>"
-    >
-        <h2 class="mediumFont indexCategorySection">ABOUT</h2>
-        <?php 
-        $aboutPost = get_post(6);     
-        $content_post = get_post($aboutPost);
-        $content = $content_post -> post_content;
-        // $content = apply_filter('the_content', $content);
-        // $content =str_replace(']]>', ']]&gt;', $content);
-        ?>
-        <section id="aboutSection">
-        <?php
-        echo $content;
-        ?>
-        </section>
+    <?php 
+        get_template_part('template-parts/card', 'about');
+    ?>
 
-</div>
 
     <div class="parallax"style='background-image:url(<?php echo $image1[0] ?>); min-height: 500px;
     height: 30vh;'
@@ -45,10 +29,38 @@ $image3 = wp_get_attachment_image_src(280, full);
     </div>
 
     <div 
-    id="contact-parallax-container" class='parallax'
+    class='accordion parallax'
+    id="contact-parallax-container" 
     style="background-image:url(<?php echo $image3[0] ?>"
     >
-        <h2>CONTACT</h2>
-        <p>wubmo</p>
+        <div class="card" style="background:unset">
+            <div class="card-header" id="headingTwo">
+                <h2 id="contactH2" class="mb-0 mediumFont">
+                    <button
+                        class="btn btn-link"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="true"
+                        aria-controls="collapseTwo"
+                    >
+                    CONTACT
+                    </button>
+                </h2>
+                <div
+                    id="collapseTwo"
+                    class="collapse"
+                    aria-labelledby="headingTwo"
+                    data-parent="#contact-parallax-container"
+                    >
+                    <div class="card-body">
+                        <?php 
+                            echo do_shortcode(get_post_field('post_content', 7));
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
     </div>

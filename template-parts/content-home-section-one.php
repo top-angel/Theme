@@ -34,12 +34,12 @@
                 <a 
                 style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(<?php echo $newsItemPictureSrc[0] ?>)"
                 href="<?php echo esc_url(get_permalink()) ?>" 
-                class='nocStudioHomeFeedItem  list-group-item list-group-item-action active'>
-                    <div class="nocStudioHomeFeedName d-flex w-100 justify-content-between">
+                class='nocStudioHomeFeedItem  list-group-item list-group-item-action'>
+                    <div id="nocStudioNewsFeed" class="nocStudioHomeFeedName d-flex w-100 justify-content-between">
                         <h5>NEWS</h5>
                     </div><!-- d-flex w-100 justify-content-between -->
                     <p class="nocStudioHomeFeedTitle mb-1"><?php echo $newsItemTitle ?></p>
-                    <small class="nocStudioHomeFeedDate"><?php echo $newsItemDate ?></small>
+                    <small class="nocStudioHomeFeedDate">Posted on <?php echo $newsItemDate ?></small>
 
                 </a><!-- list-group-item list-group-item-action active -->
 
@@ -58,7 +58,8 @@
         
                     $eventItemTitle = get_the_title();
                     $eventItemContent = get_the_content();
-                    $eventItemDate = get_the_date();
+                    $eventItemDate = get_field('event_date', false, false);
+                    $eventDate = new DateTime($eventItemDate);
                     $eventItemAuthor = get_the_author();
                     $eventItemPictureSrc = wp_get_attachment_image_src(get_field('news_image', false, false), false);
                 }
@@ -68,12 +69,49 @@
                 <a 
                 style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(<?php echo $eventItemPictureSrc[0] ?>)"
                 href="<?php echo esc_url(get_permalink()) ?>" 
-                class='nocStudioHomeFeedItem  list-group-item list-group-item-action active'>
-                    <div class="nocStudioHomeFeedName d-flex w-100 justify-content-between">
+                class='nocStudioHomeFeedItem  list-group-item list-group-item-action'>
+                    <div id="nocStudioEventFeed" class="nocStudioHomeFeedName d-flex w-100 justify-content-between">
                         <h5>EVENTS</h5>
                     </div><!-- d-flex w-100 justify-content-between -->
                     <p class="nocStudioHomeFeedTitle mb-1"><?php echo $eventItemTitle ?></p>
-                    <small class="nocStudioHomeFeedDate"><?php echo $eventItemDate ?></small>
+                    <small class="nocStudioHomeFeedDate">Event @<?php echo $eventDate->format('g:i')?> on <?php echo $eventDate->format('F j, Y') ?></small>
+
+                </a><!-- list-group-item list-group-item-action active -->
+
+                <?php wp_reset_postdata();
+                
+                //Blog Stuff
+
+                $blogArgs = array (
+                    'category_name'=> array('blog'),
+                    'order' => 'DESC',
+                    'orderby' => 'date',
+                    'post_per_page' => '1'
+                );
+        
+                $blogItem = new WP_Query($blogArgs);
+                if( $blogItem -> have_posts() ) {
+                    $blogItem -> the_post();
+        
+                    $blogItemTitle = get_the_title();
+                    $blogItemContent = get_the_content();
+                    $blogItemDate = get_the_date();
+                    $blogItemAuthor = get_the_author();
+                    $blogItemPictureSrc = wp_get_attachment_image_src(get_field('news_image', false, false), false);
+                }
+                
+                
+                ?>
+
+                <a 
+                style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(<?php echo $eventItemPictureSrc[0] ?>)"
+                href="<?php echo esc_url(get_permalink()) ?>" 
+                class='nocStudioHomeFeedItem  list-group-item list-group-item-action'>
+                    <div id="nocStudioBlogFeed" class="nocStudioHomeFeedName d-flex w-100 justify-content-between">
+                        <h5>BLOG</h5>
+                    </div><!-- d-flex w-100 justify-content-between -->
+                    <p class="nocStudioHomeFeedTitle mb-1"><?php echo $blogItemTitle ?></p>
+                    <small class="nocStudioHomeFeedDate">Posted on <?php echo $blogItemDate?></small>
 
                 </a><!-- list-group-item list-group-item-action active -->
 

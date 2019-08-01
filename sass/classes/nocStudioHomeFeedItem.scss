@@ -3,4 +3,14 @@
     grid-template-rows: 1fr .2fr;
     grid-template-columns: 7rem auto 1fr;
     padding: 0;
+    color: whitesmoke !important;
+    margin: 1vw 0;
+    transition: box-shadow 1s;
+    -webkit-transition: box-shadow 1s;   
+
+    &:hover {
+        border-color: $nocYellow;
+        box-shadow: 0 0 20px $nocYellow;
+
+    }
 }

@@ -6,6 +6,8 @@
     id='parallax1'
     style='background-image: url(<?php echo $image1[0] ?>)'
     >
+
+
     <?php 
         //we will get the most recent news item, event, and blog post    
         $newsArgs = array (
@@ -29,7 +31,8 @@
     ?>
         <!-- start of list group -->
             <div class="list-group">
-                
+            <h3 id="recentPostsHeader">Recent Posts</h3>
+
                 <!-- News item first -->
                 <a 
                 style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(<?php echo $newsItemPictureSrc[0] ?>)"
@@ -61,7 +64,7 @@
                     $eventItemDate = get_field('event_date', false, false);
                     $eventDate = new DateTime($eventItemDate);
                     $eventItemAuthor = get_the_author();
-                    $eventItemPictureSrc = wp_get_attachment_image_src(get_field('news_image', false, false), false);
+                    $eventItemPictureSrc = wp_get_attachment_image_src(get_field('event_image', false, false), false);
                 }
                 
                 ?>
@@ -74,7 +77,7 @@
                         <h5>EVENTS</h5>
                     </div><!-- d-flex w-100 justify-content-between -->
                     <p class="nocStudioHomeFeedTitle mb-1"><?php echo $eventItemTitle ?></p>
-                    <small class="nocStudioHomeFeedDate">Event @<?php echo $eventDate->format('g:i')?> on <?php echo $eventDate->format('F j, Y') ?></small>
+                    <small class="nocStudioHomeFeedDate">Event @<?php echo $eventDate->format('g:ia')?> on <?php echo $eventDate->format('F j, Y') ?></small>
 
                 </a><!-- list-group-item list-group-item-action active -->
 
@@ -104,7 +107,7 @@
                 ?>
 
                 <a 
-                style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(<?php echo $eventItemPictureSrc[0] ?>)"
+                style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(<?php echo $blogItemPictureSrc[0] ?>)"
                 href="<?php echo esc_url(get_permalink()) ?>" 
                 class='nocStudioHomeFeedItem  list-group-item list-group-item-action'>
                     <div id="nocStudioBlogFeed" class="nocStudioHomeFeedName d-flex w-100 justify-content-between">
@@ -113,6 +116,7 @@
                     <p class="nocStudioHomeFeedTitle mb-1"><?php echo $blogItemTitle ?></p>
                     <small class="nocStudioHomeFeedDate">Posted on <?php echo $blogItemDate?></small>
 
+                    <?php wp_reset_postdata(); ?>
                 </a><!-- list-group-item list-group-item-action active -->
 
             </div><!-- .list-group -->

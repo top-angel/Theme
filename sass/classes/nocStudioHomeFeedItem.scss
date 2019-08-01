@@ -6,11 +6,17 @@
     color: whitesmoke !important;
     margin: 1vw 0;
     transition: box-shadow 1s;
-    -webkit-transition: box-shadow 1s;   
+    -webkit-transition: box-shadow 1s;  
+    background-size: cover !important;
+    background-attachment: fixed !important; 
 
     &:hover {
         border-color: $nocYellow;
         box-shadow: 0 0 20px $nocYellow;
 
+    }
+
+    &:first-of-type {
+        margin: 0;
     }
 }

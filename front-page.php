@@ -21,8 +21,9 @@ get_header();
 		<main id="main" class="site-main">
 			
 		<?php
+			get_template_part('template-parts/content', 'logo');
 			get_template_part('template-parts/content', 'parallax-home');
-			get_template_part( 'template-parts/content', 'home' );
+			// get_template_part( 'template-parts/content', 'home' );
 
 		?>
 

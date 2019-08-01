@@ -1,0 +1,6 @@
+.nocStudioHomeFeedItem {
+    display:grid;
+    grid-template-rows: 1fr .2fr;
+    grid-template-columns: 7rem auto 1fr;
+    padding: 0;
+}

@@ -149,6 +149,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*------------------------------------------
 # Classes
 ---------------------------------------*/
+@import 'classes/nocStudioHomeFeedDate.scss';
+@import 'classes/nocStudioHomeFeedItem.scss';
+@import 'classes/nocStudioHomeFeedName.scss';
+@import 'classes/nocStudioHomeFeedTitle.scss';
 @import 'classes/homePageSectionHeader.scss';
 @import 'classes/indexCategorySection.scss';
 @import "classes/page-header.scss";

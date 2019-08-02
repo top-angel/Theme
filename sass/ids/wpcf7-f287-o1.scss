@@ -5,4 +5,12 @@
     color: whitesmoke;
     border-style: double;
     padding: 3rem;
+    font-family: $mediumFont;
+
+    input, textarea {
+        background: transparent;
+        color: whitesmoke;
+        font-family: $regularFont;
+        font-size:1.3rem;
+    }
 }

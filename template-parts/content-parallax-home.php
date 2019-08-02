@@ -15,4 +15,10 @@ $fbIcon = wp_get_attachment_image_src(291, full);
 
     <?php get_template_part('template-parts/card', 'contact'); ?>
 
+
+    <div class="parallax"style='background-image:url(<?php echo $image1[0] ?>);
+    height: 30vh;'
+    >   
+    </div> 
+
     

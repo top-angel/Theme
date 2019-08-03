@@ -7,6 +7,8 @@ function addBlacklistClass() {
             jQuery( this ).addClass( 'wp-link' );
         }
     });
+
+    j
 }
 
 ( function (jQuery) {
@@ -16,7 +18,7 @@ function addBlacklistClass() {
 
         var settings = {
             anchors: 'a',
-            blacklist: '.wp-link',
+            blacklist: '.wp-link, .drift a',
             onAfter: function($container){
                 addBlacklistClass();
                 var $hash = jQuery( window.location.hash );

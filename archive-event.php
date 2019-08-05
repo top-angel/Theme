@@ -8,7 +8,6 @@
  */
 
 $eventVideo =  get_attached_media('video', 301);
-var_dump($eventVideo);
  
 get_header();
 ?>

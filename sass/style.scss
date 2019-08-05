@@ -149,6 +149,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*------------------------------------------
 # Classes
 ---------------------------------------*/
+@import 'classes/event-anchor.scss';
+@import 'classes/event-content.scss';
+@import 'classes/event-date.scss';
+@import 'classes/event-details.scss';
+@import 'classes/event-item.scss';
+@import 'classes/event-name.scss';
+@import 'classes/event-page-image.scss';
 @import 'classes/nocStudioHomeFeedDate.scss';
 @import 'classes/nocStudioHomeFeedItem.scss';
 @import 'classes/nocStudioHomeFeedName.scss';

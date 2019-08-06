@@ -1,3 +1,14 @@
 .news-hub-article-full {
     background: whitesmoke;
+
+    header.entry-header {
+        animation: none !important;
+
+        
+
+        h1.entry-title {
+            background: unset;
+            color: unset;
+        }
+    }
 }

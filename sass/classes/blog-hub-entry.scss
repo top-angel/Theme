@@ -2,7 +2,7 @@
 box-shadow: 1vw 1vw;
     margin: 1rem;
     padding: 2rem;
-    background: radial-gradient(whitesmoke, whitesmoke, whitesmoke, transparent);
+    background: $transparentBackground;
 
     .entry-header {
         .entry-title {

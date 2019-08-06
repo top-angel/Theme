@@ -80,6 +80,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 @import './fonts.scss';
 
+/*----------------------------
+#Backgrounds
+-------------------------*/
+@import './backgrounds.scss';
 
 
 /*--------------------------------------------------------------
@@ -150,7 +154,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Classes
 ---------------------------------------*/
 @import 'classes/blog-hub-entry.scss';
+@import 'classes/blog-hub-entry-full.scss';
 @import 'classes/blog-hub-entry-title.scss';
+@import 'classes/comments-area.scss';
+@import 'classes/comment-form-comment.scss';
+@import 'classes/comment-list.scss';
+@import 'classes/comments-title.scss';
 @import 'classes/event-anchor.scss';
 @import 'classes/event-content.scss';
 @import 'classes/event-date.scss';
@@ -158,6 +167,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import 'classes/event-item.scss';
 @import 'classes/event-name.scss';
 @import 'classes/event-page-image.scss';
+@import 'classes/logged-in-as.scss';
+@import 'classes/nav-next.scss';
+@import 'classes/nav-previous.scss';
 @import 'classes/news-hub-article.scss';
 @import 'classes/news-hub-article-full.scss';
 @import 'classes/news-hub-image.scss';
@@ -170,6 +182,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "classes/page-header.scss";
 @import 'classes/parallax.scss';
 @import 'classes/parallaxVideo.scss';
+@import 'classes/post-navigation.scss';
+@import 'classes/reply.scss';
 @import "classes/site-content.scss";
 @import "classes/slide-out.scss";
 

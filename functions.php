@@ -263,6 +263,11 @@ function get_acf_date($acfDate, $originalTime) {
 	}
 }
 
+function wpdocs_excerpt_more($more) {
+	return '<a href=" '. get_the_permalink(). ' "rel="nofollow">   Read More...</a>';
+}
+add_filter('excerpt_more', 'wpdocs_excerpt_more');
+
 
 function add_specific_menu_location_atts( $atts, $item, $args ) {
     // check if the item is in the primary menu
@@ -298,5 +303,7 @@ function fouc_protect_against () {
 		</script>
 
     <?php
+
+
 
 }

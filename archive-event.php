@@ -31,10 +31,10 @@ get_header();
 
 
 
-	<div id="eventPagePrimary" class="content-area">
+	<div class="content-area parallaxVideo">
 		<!--TODO: You must secure this reckless URL usage!!!! sanitize or escape the url or something, look it up yo -->
 		<video autoplay muted loop>
-		<source src="<?php echo get_site_url() . '/wp-content/uploads/2019/08/Curtains-320.mp4' ?>" type="video/mp4">
+		<source src="<?php echo get_site_url() . '/wp-content/uploads/2019/08/Curtains-320-1.mp4' ?>" type="video/mp4">
 		<!-- <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
 		</video>
 

@@ -149,6 +149,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*------------------------------------------
 # Classes
 ---------------------------------------*/
+@import 'classes/blog-hub-entry.scss';
+@import 'classes/blog-hub-entry-title.scss';
 @import 'classes/event-anchor.scss';
 @import 'classes/event-content.scss';
 @import 'classes/event-date.scss';

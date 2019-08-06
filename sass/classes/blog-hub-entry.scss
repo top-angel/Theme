@@ -1,0 +1,34 @@
+.blog-hub-entry {
+box-shadow: 1vw 1vw;
+    margin: 1rem;
+    padding: 2rem;
+    background: radial-gradient(whitesmoke, whitesmoke, whitesmoke, transparent);
+
+    .entry-header {
+        .entry-title {
+            font-family: $mediumFont;
+        }
+    }
+
+    .entry-content {
+        font-family: $regularFont;
+        font-size: 1.4rem;
+    }
+
+    .entry-meta {
+        span {
+            font-style: italic;
+            font-family: $regularFont;
+        }
+    }
+
+    a {
+        img {
+            border: solid;
+            float: left;
+            width: auto;
+            max-width: 42vw;
+            margin: 0.6rem;
+        }
+    }
+}

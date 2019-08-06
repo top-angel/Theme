@@ -1,11 +1,11 @@
-#eventPagePrimary{ 
-    height: 300px;
+.parallaxVideo{ 
     padding-bottom: 50px;
     padding-top: 50px; 
 }
-#eventPagePrimary video{ 
+.parallaxVideo video{ 
     min-width: 100%;
     position: fixed;
     top:0;
     z-index: -999;
+    height:100vh;
 }

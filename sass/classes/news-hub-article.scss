@@ -1,0 +1,30 @@
+.news-hub-article {
+    box-shadow: 1vw 1vw;
+    padding: 2rem;
+    margin: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    background: radial-gradient(whitesmoke, whitesmoke, whitesmoke, transparent);
+
+    header {
+        h2 {
+            font-family: $mediumFont;
+        }
+
+        .entry-meta {
+            span {
+                font-family: $regularFont;
+                font-style: italic;
+            }
+        }
+    }
+
+    .entry-content {
+        font-family: $regularFont;
+        font-size: 1.4rem;
+    }
+
+    
+}

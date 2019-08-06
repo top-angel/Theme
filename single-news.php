@@ -10,9 +10,12 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area parallaxVideo">
 		<main id="main" class="site-main">
-
+        <video autoplay muted loop>
+		<source src="<?php echo get_site_url() . '/wp-content/uploads/2019/08/New-Year-19739.mp4' ?>" type="video/mp4">
+		<!-- <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
+		</video>
 		<?php
 		while ( have_posts() ) :
 			the_post();

@@ -1,0 +1,13 @@
+.review-entry {
+    background: $transparentBackground;
+    margin: auto 1rem;
+    p {
+        font-family: $regularFont;
+        font-size: 1.4rem
+    }
+
+    h4 {
+        font-family: $mediumFont;
+        font-style: italic;
+    }
+}

@@ -37,7 +37,8 @@ $acfDate = get_field('date_posted');
 
 	<?php nocstudiox_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content card review-entry">
+		<div class="card-body">
 		<?php
 		the_content( sprintf(
 			wp_kses(
@@ -51,13 +52,15 @@ $acfDate = get_field('date_posted');
 			),
 			get_the_title()
         ) );
-        echo get_field('reviewer');
-
+		?>
+		<h4><?php echo get_field('reviewer');?></h4>
+		<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'nocstudiox' ),
 			'after'  => '</div>',
 		) );
 		?>
+		</div><!-- card-body-->
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

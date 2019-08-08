@@ -31,10 +31,11 @@
 					placeholder="Search" 
 					aria-label="Search"
 					value
-					name="s"
+                    name="s"
+                    id="nocStudioSearchBar"
 				>
 				<div class="input-group-btn">
-					<button class="btn btn-default" type="submit">
+					<button id="nocStudioSearchBarButton" class="btn btn-default" type="submit">
 						<i class="fas fa-search"></i>
 					</button>
 				</div>

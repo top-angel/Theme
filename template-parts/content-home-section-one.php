@@ -1,10 +1,16 @@
-<?php $image1 = wp_get_attachment_image_src(278, full); ?>
+
+
+<?php 
+ $image1 = wp_get_attachment_image_src(312, full);
+ $imageSmall = wp_get_attachment_image_src(313, full);
+
+?>
 
 
 <div 
     class="parallax" 
     id='parallax1'
-    style='background-image: url(<?php echo $image1[0] ?>)'
+    style='background-image: url(<?php echo $imageSmall[0] ?>)'
     >
 
 

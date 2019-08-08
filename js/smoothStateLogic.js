@@ -8,7 +8,7 @@ function addBlacklistClass() {
         }
     });
 
-    j
+    
 }
 
 ( function (jQuery) {

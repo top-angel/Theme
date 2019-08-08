@@ -1,0 +1,9 @@
+#nocStudioSearchBarButton {
+    background: $nocGreen !important;
+
+    &:hover {
+        i.fa-search {
+            color: whitesmoke !important;
+        }
+    }
+}

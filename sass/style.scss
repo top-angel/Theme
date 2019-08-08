@@ -153,6 +153,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*------------------------------------------
 # Classes
 ---------------------------------------*/
+@import 'classes/artist-slide.scss';
+@import 'classes/artist-slides-UL.scss';
 @import 'classes/blog-hub-entry.scss';
 @import 'classes/blog-hub-entry-full.scss';
 @import 'classes/blog-hub-entry-title.scss';
@@ -215,6 +217,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import 'ids/nocStudioEventFeed.scss';
 @import "ids/nocStudioNavbarUL.scss";
 @import 'ids/nocStudioNewsFeed.scss';
+@import 'ids/nocStudioSearchBar.scss';
+@import 'ids/nocStudioSearchBarButton.scss';
 @import 'ids/parallax1.scss';
 @import 'ids/recentPostsHeader.scss';
 @import 'ids/wpcf7-f287-o1.scss';

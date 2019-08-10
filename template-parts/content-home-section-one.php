@@ -8,7 +8,7 @@
 
 
 <div 
-    class="parallax" 
+    class="parallax smallHomeSection" 
     id='parallax1'
     style='background-image: url(<?php echo $imageSmall[0] ?>)'
     >

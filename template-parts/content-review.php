@@ -38,7 +38,7 @@ $acfDate = get_field('date_posted');
 	<?php nocstudiox_post_thumbnail(); ?>
 
 	<div class="entry-content card review-entry">
-		<div class="card-body">
+		<div class="card-body review-div">
 		<?php
 		the_content( sprintf(
 			wp_kses(

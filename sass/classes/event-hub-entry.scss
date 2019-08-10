@@ -1,0 +1,25 @@
+.event-hub-entry {
+    box-shadow: 1vw 1vw $nocYellow;
+    background: $transparentBackground;
+    margin: 1rem;
+    padding: 2rem;
+
+    header.entry-header {
+        h1.entry-title {
+            background: none;
+            color: black;
+        }
+
+        div.entry-meta {
+            span {
+                font-style: italic;
+                font-family: $regularFont;
+            }
+        }
+    }
+
+    .entry-content {
+        font-family: $regularFont;
+        font-size: 1.4rem;
+    }
+}

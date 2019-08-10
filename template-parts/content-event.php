@@ -5,8 +5,7 @@ $eventDate = new DateTime(get_field("event_date", false, false));
 $eventImage = wp_get_attachment_image_src(get_field('event_image', false, false), false);
 
 ?>
-<div class='event-item'>
-    <a class='event-anchor' >
+<div class='event-hub-entry'>
       <div class='event-date-sphere'>
       <span class='event-name'><?php the_title(); ?></span>
         <span class="event-date">
@@ -15,7 +14,7 @@ $eventImage = wp_get_attachment_image_src(get_field('event_image', false, false)
           <?php echo $eventDate -> format('Y')?>
         </span><!-- event-date-->
       </div><!-- event-date-sphere -->
-    </a>
+    
     <div class='event__template__content__container'>
       <div class='event-content'>
       <?php 
@@ -33,9 +32,9 @@ $eventImage = wp_get_attachment_image_src(get_field('event_image', false, false)
         <?php the_content(); ?>
       </div>
       <div class='event-details'>
-        <div class='event-time'><strong>Time: </strong> <?php echo $eventDate->format('g:i a'); ?></div>
-        <div class='event-tickets'><strong>Tickets: </strong> <?php echo get_field('event_tickets'); ?></div>
-        <div class="event-tickets"><strong>Address: <br></strong> <?php echo $mapLocation['address']; ?> </div>
+        <div class='event-time'><strong class="event-strong">Time: </strong> <?php echo $eventDate->format('g:i a'); ?></div>
+        <div class='event-tickets'><strong class="event-strong">Tickets: </strong> <?php echo get_field('event_tickets'); ?></div>
+        <div class="event-tickets"><strong class="event-strong">Address: <br></strong> <?php echo $mapLocation['address']; ?> </div>
 
       </div>
       
@@ -59,6 +58,7 @@ $eventImage = wp_get_attachment_image_src(get_field('event_image', false, false)
 		?>
 
 		<li class="artist-slide">
+    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
 
 			<?php if( $link ): ?>
         <a href="<?php echo $link; ?>">
@@ -67,17 +67,12 @@ $eventImage = wp_get_attachment_image_src(get_field('event_image', false, false)
 			<?php endif; ?>
               <h4><?php echo $name ?></h4>
               <strong><?php echo $role ?></strong>
-              
+
 			<?php if( $link ): ?>
         </a>
       <?php else: ?>
         </a>
       <?php endif; ?>
-           
-      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-
-		    <?php echo $content; ?>
-
 		</li>
 
 	<?php endwhile; ?>

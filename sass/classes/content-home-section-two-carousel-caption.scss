@@ -1,6 +1,8 @@
 .content-home-section-two-carousel-caption {
     h2 {
     font-size: 5rem;
+    color: $nocBlack;
+    margin: 2rem;
     }
 
     h4 {
@@ -8,5 +10,10 @@
     }
 
     background:$transparentBackground;
+
+    &:hover {
+        box-shadow: .51vw .51vw $nocBlack;
+        transition: box-shadow .500s ease-in-out;
+    }
    
 }

@@ -1,8 +1,11 @@
 <!-- We are going to have a div that has a circle with NOC
 then it will have the word STUDIO, then the slogan will appear underneath. -->
+<?php 
+$bannerImage = wp_get_attachment_image_src(330, full);
+
+?>
+
 
 <section id="nocLogoSection">
-    <h1 id="nocLogoNOC">NOC</h1>
-    <h3 id="nocLogoSTUDIO">STUDI</h3>
-    <h5 id="nocLogoSlogan"> - express your authentic voice - </h5>
+    <img src="<?php echo $bannerImage[0] ?>" />
 </section>

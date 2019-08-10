@@ -158,6 +158,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import 'classes/blog-hub-entry.scss';
 @import 'classes/blog-hub-entry-full.scss';
 @import 'classes/blog-hub-entry-title.scss';
+@import 'classes/carousel-indicators.scss';
 @import 'classes/comments-area.scss';
 @import 'classes/comment-form-comment.scss';
 @import 'classes/comment-list.scss';
@@ -205,8 +206,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import 'ids/aboutH2.scss';
 @import 'ids/aboutSection.scss';
 @import 'ids/blog-home-section-two-subtitle.scss';
+@import 'ids/carousel-inner-h2.scss';
 @import 'ids/contactH2.scss';
 @import 'ids/contactSection.scss';
+@import 'ids/event-home-section-two-subtitle.scss';
 @import 'ids/footerFBIcon.scss';
 @import 'ids/footer-social-media-grid.scss';
 @import 'ids/frontPageBannerBox.scss';
@@ -215,6 +218,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import 'ids/homePageEventsSection.scss';
 @import 'ids/homePageNewsSection.scss';
 @import 'ids/homePageReviewsSection.scss';
+@import 'ids/news-home-section-two-subtitle.scss';
 @import 'ids/nocLogoNOC.scss';
 @import 'ids/nocLogoSection.scss';
 @import 'ids/nocLogoSlogan.scss';

@@ -10,4 +10,14 @@
         font-family: $mediumFont;
         font-style: italic;
     }
+
+   
+
+}
+
+@media screen and (min-width: $laptopMin) {
+
+    .review-entry {
+    margin: auto 30vw;
+    }
 }

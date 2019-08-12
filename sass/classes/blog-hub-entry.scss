@@ -1,6 +1,6 @@
 .blog-hub-entry {
-box-shadow: 1vw 1vw;
-    margin: 1rem;
+box-shadow: .1vw .1vw;
+    margin: 3rem;
     padding: 2rem;
     background: $transparentBackground;
 
@@ -30,5 +30,13 @@ box-shadow: 1vw 1vw;
             max-width: 42vw;
             margin: 0.6rem;
         }
+    }
+}
+
+@media screen and (min-width: $laptopMin) {
+    .blog-hub-entry {
+        width: 70vw;
+        margin: auto;
+        margin-bottom: 3vw;
     }
 }

@@ -75,7 +75,7 @@
 
     <div class="carousel-item">
       <img class="d-block w-100 home-section-two-slide-image" src="<?php echo $eventItemPictureSrc[0]?>" alt="Second slide">
-      <a href="<?php echo esc_url(get_permalink()) ?>">
+      <a href="<?php echo esc_url(get_post_type_archive_link('event')) ?>">
         <div class="carousel-caption d-md-block content-home-section-two-carousel-caption">
             <h2><?php echo $eventItemTitle ?></h2>
             <h4 id='event-home-section-two-subtitle'>EVENT</h4>
@@ -90,7 +90,7 @@
                 //Blog Stuff
 
                 $blogArgs = array (
-                    'category_name'=> array('blog'),
+                    'category_name'=> 'blog',
                     'order' => 'DESC',
                     'orderby' => 'date',
                     'post_per_page' => '1'

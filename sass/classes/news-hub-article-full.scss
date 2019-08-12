@@ -12,3 +12,9 @@
         }
     }
 }
+@media screen and (min-width: $laptopMin) {
+    .news-hub-article-full {
+        width: 70vw;
+        margin: auto;
+    }
+}

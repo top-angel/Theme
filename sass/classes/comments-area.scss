@@ -10,3 +10,10 @@
     }
 
 }
+
+@media screen and (min-width: $laptopMin) {
+    .comments-area {
+        width: 50vw;
+        margin: auto;
+    }
+}

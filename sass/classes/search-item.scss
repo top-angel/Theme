@@ -1,0 +1,23 @@
+.search-item {
+    box-shadow: .1vw .1vw $nocBlue;
+
+    background: whitesmoke;
+    margin:auto;
+    margin-bottom: 4vw;
+    width: 50vw;
+
+
+    header {
+        font-family: $mediumFont;
+    }
+
+    .entry-summary {
+        font-family: $regularFont;
+        font-size: 1.3rem;
+        padding: 2rem;
+    }
+
+    .entry-title {
+        font-size: 2rem;
+    }
+}

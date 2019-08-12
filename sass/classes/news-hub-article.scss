@@ -35,3 +35,10 @@
 
     
 }
+
+@media screen and (min-width: $laptopMin) {
+    .news-hub-article {
+        width: 70vw;
+        margin: auto;
+    }
+}

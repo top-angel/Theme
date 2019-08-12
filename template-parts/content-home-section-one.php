@@ -77,7 +77,7 @@
 
                 <a 
                 style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(<?php echo $eventItemPictureSrc[0] ?>)"
-                href="<?php echo esc_url(get_permalink()) ?>" 
+                href="<?php echo esc_url(get_post_type_archive_link('event')) ?>" 
                 class='nocStudioHomeFeedItem  list-group-item list-group-item-action'>
                     <div id="nocStudioEventFeed" class="nocStudioHomeFeedName d-flex w-100 justify-content-between">
                         <h5>EVENTS</h5>
@@ -92,7 +92,7 @@
                 //Blog Stuff
 
                 $blogArgs = array (
-                    'category_name'=> array('blog'),
+                    'category_name'=> 'blog',
                     'order' => 'DESC',
                     'orderby' => 'date',
                     'post_per_page' => '1'

@@ -1,5 +1,5 @@
 .event-hub-entry {
-    box-shadow: 1vw 1vw $nocYellow;
+    box-shadow: .5vw .5vw $nocYellow;
     background: $transparentBackground;
     margin: 1rem;
     padding: 2rem;
@@ -21,5 +21,15 @@
     .entry-content {
         font-family: $regularFont;
         font-size: 1.4rem;
+    }
+
+   
+}
+
+@media screen and (min-width: $laptopMin) {
+    .event-hub-entry {
+        width: 70vw;
+        margin: auto;
+        margin-bottom: 3vw;
     }
 }

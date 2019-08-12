@@ -8,12 +8,19 @@
  */
 
 ?>
+<?php print post_class();
+print the_category();
+print get_post_type();
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class('search-item'); ?> >
 	<header class="entry-header">
-		<p>Find a way to put type of event here, maybe color coordinate them</p>
+	<?php if (get_post_type() === 'event') : ?>
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_post_type_archive_link('event') ) ), '</a></h2>' ); ?>
+	<?php else: ?>
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
+	<?php endif; ?>
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php

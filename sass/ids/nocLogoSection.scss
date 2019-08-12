@@ -1,5 +1,20 @@
+@keyframes logoIntroduction {
+    0%{
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 #nocLogoSection {
-    display: grid;
-    grid-template-columns: auto auto 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    animation: logoIntroduction 2s ease-in;
+
+    @media screen and (min-width: $laptopMin) {
+        img {
+        width: 100vw;
+        }
+    }
+
 }

@@ -1,8 +1,12 @@
 
 #nocNavBar {
     padding:1rem;
+    font-size: 1.25rem;
     background: yellow;
     a {
         font-family: $largeFont;
+    }
+    .navbar-brand {
+        font-size: 2rem;
     }
 }

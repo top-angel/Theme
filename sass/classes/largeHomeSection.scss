@@ -1,0 +1,6 @@
+.largeHomeSection {
+    display: none;
+    @media screen and (min-width: $laptopMin) {
+        display: unset;
+    }
+}

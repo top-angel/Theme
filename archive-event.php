@@ -40,7 +40,19 @@ get_header();
 
 		<main id="main" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php 
+
+		$archiveEventQueryArgs = array(
+			'post_type' => 'event',
+			'meta_key' => 'event_date',
+			'meta_value' => date('Y-m-d'),
+			'meta_compare' => '>'
+			
+		);
+
+		$archiveEventQuery = new WP_Query($archiveEventQueryArgs);
+		
+		if ( have_posts() ) : ?>
 
 			<header class="page-header">
                 <h1 class="page-title">Events</h1>
@@ -51,8 +63,8 @@ get_header();
 
 			<?php
 			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			while ( $archiveEventQuery->have_posts() ) :
+				$archiveEventQuery->the_post();
 
 				/*
 				 * Include the Post-Type-specific template for the content.

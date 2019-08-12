@@ -1,4 +1,5 @@
-<!-- TODO:Figure out why this doesn't display properly all the time. -->
+<!-- TODO:Figure out why this doesn't display properly all the time.
+Edit: Made a hacky solution, will need to eventually look into it futher -->
 
 <?php
 /**
@@ -35,7 +36,14 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+		<script>
+			if(!localStorage.getItem('scheduleReload')) {
+				localStorage.setItem('scheduleReload', true);
+				setTimeout(()=>{
+					window.location.reload();
+				}, 1000);
+			} 
+		</script>
 <?php
 get_sidebar();
 get_footer();
